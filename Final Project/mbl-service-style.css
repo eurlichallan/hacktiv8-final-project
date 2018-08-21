@@ -1,0 +1,352 @@
+  * {
+    box-sizing: border-box;
+}
+
+#body {
+    width: 100%;
+    margin: auto;
+}
+
+/* grid */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+    /* border: solid red; */
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/* ------------------Start Of Media Quaries----------------------------------------------------------------------------------- */
+
+
+
+@media only screen and (max-width: 768px) {
+    /* #body {
+        background-color: red;
+    } */
+
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+      /* Hide desktop on mobile */
+    div#selling-container {
+        display: none;
+      }
+    div#nav-bar-container {
+        display: none;
+    }
+    div#service-container {
+        display: none;
+    }
+    div#feature-blog-container {
+        display: none;
+    }
+    div#clients-partners-top-container {
+        display: none;
+    }
+    div#clients-partners-slider-container {
+        display: none;
+    }
+    div#footer-container {
+        display: none;
+    }
+    div#copyright-container {
+        display: none;
+    }
+    
+
+/* ------------------NAVIGATION MOBILE------------------ */
+    div#navMbl {
+        display: block;
+        width: 100%;
+        padding: 0 30px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+        background-color:  #00757D;
+    }
+
+    label#nav-label {
+        font-size: 26px;
+        /* height: 70px; */
+        line-height: 0;
+        vertical-align: middle;
+        /* display: block; */
+        cursor: pointer;
+        float: right;
+        width: 26px;
+        padding-top: 22px;
+        color: white;
+    }
+
+    #mbl-menu{
+        display: none;
+    }
+
+    img.mbl-nav-logo{
+        width: 150px;
+        padding: 10px 0 0 10px;
+        float: left;
+    } 
+
+    div#navMbl div#mbl-menu a{
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: white;
+        padding: 10px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    div#navMbl div#mbl-menu a:hover{
+        color: White;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 500;
+        border-bottom: 2px solid white;   
+        padding-bottom: 7px;
+        cursor: pointer;
+    }
+}
+
+/* ------------------End Of Media Quaries------------------ */
+
+
+
+/* ------------------MOBILE OUR SERVICE PAGE------------------ */
+
+div#background-color{
+    width: 100%;
+    height: 300px;
+    background-color: #00757D;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+h1.mbl-service-title{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 20pt;
+    text-align: center;
+    color: white;
+    margin: 50px 0 50px 0; 
+}
+
+/* ------------------MOBILE SELLING POINTS MOBILE------------------*/
+div#mbl-selling-container {
+    /* background-image: url("img/arcBackgroundMobile.png"); */
+    background-size:cover;
+    /* margin-top: 500px; */
+    padding:0 30px ;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+h1.selling-title {
+    color: #12868E;
+    font-family: 'Quicksand', sans-serif;
+    font-weight:500;
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* slideshow container */
+div#mbl-slide-container {
+    width: 100%;
+    height: 100%;
+    /* max-width: 100%; */
+    position: static;
+    display: block;
+    margin: auto;
+}
+/* .img-bg{
+    background-color: #bbb ;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    position: static;
+} */
+.mbl-selling-img{
+    width: 120px;
+    margin: auto;
+    display: block;
+    /* padding-bottom: 50px; */
+}
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+/* Selling title */
+.mbl-selling-title {
+    font-family: 'Roboto', sans-serif;
+    color: #0B2C39;
+    font-size: 18px;
+    padding:20px 5px;
+    position: static;
+    width: 100%;
+    text-align: center;
+
+}
+/* Caption text */
+.text {
+    font-family: 'Roboto', sans-serif;
+    color: #4A4A4A;
+    font-size: 12px;
+    padding: 0 20px;
+    position: static;
+    width: 100%;
+    text-align: center;
+    /* overflow: scroll; */
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 20;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: #0B2C39;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 25px 0 0 25px;
+    text-decoration: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 6%;
+    border-radius: 0 25px 25px 0;
+}
+
+/* On hover, add background color */
+.prev:hover, .next:hover {
+    background-color:rgb(24, 179, 190) ;
+    text-decoration: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    top: 500px;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* ------------------FOOTER MOBILE------------------ */
+
+div#mbl-footer-container {
+    width: 100%;
+    height: 100%;
+    background-color: #12868E;
+    margin-top: 100px;
+}
+h3#mbl-footer-title {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15pt;
+    font-weight: 400; 
+    padding: 0 50px;
+}
+/* footer-about-content */
+p#mbl-footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 50px;
+}
+/* footer-information-contact us-content */
+ul#mbl-footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 50px;;
+
+}
+ul#mbl-footer-content{
+    display: inline-block;
+
+}
+/* list kerning */
+ul#mbl-footer-content li {
+    margin: 0 0 15px 0;
+}
+ul#mbl-footer-content li a{
+    text-decoration: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 13px;
+}
+ul#mbl-footer-content li a:hover{
+    color: #0B2C39;
+}
+/* icon to list gap */
+ul#mbl-footer-content img {
+    width: 15px;
+    margin-right: 15px;
+}
+#mbl-footer-line{
+    border-bottom: solid 2px #00757D;
+}

@@ -1,0 +1,270 @@
+  * {
+    box-sizing: border-box;
+}
+
+#body {
+    width: 100%;
+    margin: auto;
+}
+
+/* grid */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+    /* border: solid red; */
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/* ------------------Start Of Media Quaries----------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+    /* Hide mobile on desktop */
+    div#selling-container-mbl {
+        display: none;
+    }
+    div#navMbl {
+        display: none;
+    }
+    div#mbl-selling-container{
+        display: none;
+    }
+    ul#mbl-footer-content {
+        display: none;
+    }
+    div#mbl-feature-blog-container{
+        display: none;
+    }
+    div#mbl-footer-container{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* #body {
+        background-color: red;
+    } */
+
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+      /* Hide desktop on mobile */
+    div#selling-container {
+        display: none;
+      }
+    div#nav-bar-container {
+        display: none;
+    }
+    div#service-container {
+        display: none;
+    }
+    div#feature-blog-container {
+        display: none;
+    }
+    div#clients-partners-top-container {
+        display: none;
+    }
+    div#clients-partners-slider-container {
+        display: none;
+    }
+    div#footer-container {
+        display: none;
+    }
+    div#copyright-container {
+        display: none;
+    }
+    
+
+/* ------------------NAVIGATION MOBILE------------------ */
+div#navMbl {
+    display: block;
+    width: 100%;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    background-color: white;
+}
+
+label#nav-label {
+    font-size: 26px;
+    /* height: 70px; */
+    line-height: 0;
+    vertical-align: middle;
+    /* display: block; */
+    cursor: pointer;
+    float: right;
+    width: 26px;
+    padding-top: 22px;
+    /* color: white; */
+}
+
+#mbl-menu{
+    display: none;
+}
+
+img.mbl-nav-logo{
+    width: 150px;
+    padding: 10px 0 0 10px;
+    float: left;
+} 
+
+div#navMbl div#mbl-menu a{
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #00757D;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+}
+div#navMbl div#mbl-menu a:hover{
+    color:  #00757D;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    border-bottom: 2px solid #00757D;   
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+
+
+
+}
+
+/* ------------------End Of Media Quaries------------------ */
+
+
+
+/* ------------------MOBILE OUR SERVICE PAGE------------------ */
+
+div#background-color{
+    width: 100%;
+    height: 290px;
+    background-color:#E9E9E9;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/* h1.mbl-client-title{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 15pt;
+    text-align: center;
+    color: #0B2C39;
+} */
+
+div.slide-container{
+    background-color: white;
+    width: 100%;
+    height: 230px;
+    border: solid 1px lightgrey;
+    left: 0;
+    right: 0;
+}
+
+h1.mbl-client-title{
+    font-family:  'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15pt;
+    text-align: center;
+    color: #0B2C39;
+    padding: 30px 5px ;
+}
+
+p.mbl-client-content {
+    font-family:  'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+    color: #0B2C39;
+    padding: 0 20px; ;
+}
+
+.carousel-control{
+    background-image:none !important;
+    filter:none !important;
+}
+.glyphicon{
+    color: #00757D;
+}
+/* ------------------FOOTER MOBILE------------------ */
+
+div#mbl-footer-container {
+    width: 100%;
+    height: 100%;
+    background-color: #12868E;
+}
+h3#mbl-footer-title {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15pt;
+    font-weight: 400; 
+    padding: 0 50px;
+}
+/* footer-about-content */
+p#mbl-footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 50px;
+}
+/* footer-information-contact us-content */
+ul#mbl-footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 50px;;
+
+}
+ul#mbl-footer-content{
+    display: inline-block;
+
+}
+/* list kerning */
+ul#mbl-footer-content li {
+    margin: 0 0 15px 0;
+}
+ul#mbl-footer-content li a{
+    text-decoration: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 13px;
+}
+ul#mbl-footer-content li a:hover{
+    color: #0B2C39;
+}
+/* icon to list gap */
+ul#mbl-footer-content img {
+    width: 15px;
+    margin-right: 15px;
+}
+#mbl-footer-line{
+    border-bottom: solid 2px #00757D;
+}

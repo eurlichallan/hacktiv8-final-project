@@ -1,0 +1,850 @@
+  * {
+    box-sizing: border-box;
+}
+
+#body {
+    width: 100%;
+    margin: auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* grid */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+    /* border: solid red; */
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/* ------------------NAVIGATION------------------ */
+nav ul {
+    display: block;
+    /* float: right; */
+    padding-top: 10px;
+}
+/* div#nav-bar-container div.row nav label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+} */
+#nav-bar-container {
+    width: 100%;
+    background-color: white;
+    /* opacity: 0.5; */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+#nav-bar-container .row{
+    vertical-align: middle;
+    width: 960px;
+    height: 80px;
+    margin: auto;
+}
+/* haistar logo */
+.row .col-4 .nav-logo {
+    display: inline-block;
+    width: 180px;
+    vertical-align: middle;
+    padding-top: 18px;
+}
+/* main navigation */
+nav ul {
+    display: flex;
+    float: right;
+    padding-top: 23px;
+}
+.row .col-8 ul#nav-menu li{
+    list-style-type: none;
+    vertical-align: middle;
+
+}
+.row .col-8 ul#nav-menu li a{
+    list-style-type: none;
+    color: #0B2C39;
+    padding: 10px;
+    font-family:  'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+}
+.row .col-8 ul#nav-menu li a:hover{
+    color: #12868E;
+    font-family:  'Quicksand', sans-serif;
+    font-weight: 500;
+    border-bottom: 3px solid #12868E;    
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+.row .col-8 ul#nav-menu li a:active{
+    color: #12868E;
+    font-family:  'Quicksand', sans-serif;
+    font-weight: 500;
+    border-bottom: 3px solid #12868E;    
+    padding-bottom: 7px;
+}
+/* ------------------HERO SECTION DESKTOP------------------*/
+div#hero-container {
+    position: relative;
+    z-index: -1;
+}
+h1.hero-title {
+    display: block;
+    color: #0B2C39;
+    font-family:  'Quicksand', sans-serif;
+    font-weight:500;
+    font-size: 50px;
+    text-align: center;
+    /* z-index: -1; */
+    /* margin-top: 150px; */
+}
+.hero-image {
+    width: 40%;
+    display: block;
+    margin: 0 30% 0 30%;
+    /* padding-bottom: 50px; */
+    /* z-index: -3; */
+    /* position: relative; */
+}
+p.hero-explain {
+    color: #12868E;
+    font-family: Quicksand;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 100px 50px;
+}
+
+
+
+/* ------------------SELLING POINTS SECTION------------------ */
+#selling-container {
+    background-image: url("img/arcBackgroundDesktop.png");
+    background-size: cover;
+    /* margin-top: 500px; */
+    padding: 30px 0 100px ;
+}
+h1.selling-title {
+    color: #12868E;
+    font-family:  'Quicksand', sans-serif;
+    font-weight:500;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+img#selling-icon {
+    width: 90px;
+    padding: 0;
+    margin: 0;
+    margin: auto;
+}
+p#selling-point-title {
+    color: #12868E;
+    font-family:  'Roboto', sans-serif;;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+p#selling-point-text {
+    color: #0B2C39;
+    font-family:  'Roboto', sans-serif;;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+/* ------------------FEATURE BLOG------------------ */
+div#feature-blog-container {
+    background-color: white;
+    height: 260px;
+}
+div#feature-blog-container div.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div h3.feature-blog-title {
+    color: #12868E;
+    font-family:  'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+div p.feature-blog-content {
+    color: #12868E;
+    font: 400 13px  'Roboto', sans-serif;
+    margin-bottom: 50px;
+}
+div button.feature-blog-button{
+    width: 100px;
+    height: 40px;
+    border: 2px solid #0B2C39;
+    cursor: pointer;
+    font: 600 11px  'Roboto', sans-serif;
+    color: #0B2C39;
+    border-radius: 20px;
+}
+div button.feature-blog-button:hover{
+    background-color: #0B2C39;
+    color: white;
+}
+div img.feature-blog-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    margin: 0;
+    padding: 20px;
+    /* vertical-align: middle; */
+}
+
+/* ------------------OUR SERVICE------------------*/
+div#service-container {
+    background-image: url("img/serviceBackgroundDesktop.png");
+    background-size: cover;
+    height: 100%;
+}
+h1.section-title {
+    padding-top: 100px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 500;
+    font-family:  Quicksand', sans-serif', sans-serif;
+    color: white ;
+}
+img.service-image-container {
+    width: 600px;
+    background-color: #0B2C39;
+}
+h2.service-title {
+    color: #0B2C39;
+    font-family:  'Roboto', sans-serif;
+    font-size: 50px;
+    padding-right: 150px;
+    margin-bottom: 100px;
+}
+p.service-content {
+    color: #0B2C39;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+    /* padding-top: 50px; */
+    padding-right: 150px;
+}
+div a{
+    text-decoration: none;
+    /* background-color: #0B2C39; */
+}
+div button.btn-left {
+    /* padding-top: 0px; */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font: 600 11px  'Roboto', sans-serif;
+    color:white;
+    background-color: #12868E;
+    background-image: url("img/arrowLeft.png");
+    background-size:cover;
+    border: none;
+    margin-bottom: 50px;
+}
+div button.btn-right {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font: 600 11px  'Roboto', sans-serif;
+    color:white;
+    background-color: #12868E;
+    background-image: url("img/arrowRight.png");
+    background-size:cover;
+    border: none;
+    margin-bottom: 50px;
+}
+
+/* ------------------CLIENTS & PARTNERS------------------ */
+div#clients-partners-top-container {
+    width: 100%;
+    height: 100%;
+    background-color:lightgray;
+}
+
+h1.client-partner-title {
+    color: #0B2C39;
+    font-size: 45px;
+    font-family:  'Quicksand', sans-serif;
+    font-weight: 500 ;
+    padding-top: 50px;
+}
+p.client-partner-content {
+    color: #0B2C39;
+    font-family:  'Roboto', sans-serif;
+    font-size: 15px;
+}
+.carousel-control{
+    background-image:none !important;
+    filter:none !important;
+}
+.glyphicon{
+    color: #00757D;
+}
+#carousel-container {
+    background-color: white;
+}
+ol.carousel-dot li{
+    color: #0B2C39;
+}
+/* slideshow container */
+
+#client-slide-container {
+    width: 100%;
+    height: 100%;
+    /* max-width: 100%; */
+    position: relative;
+    display: block;
+}
+.mbl-selling-img{
+    width: 120px;
+    margin: auto;
+    display: block;
+    padding-bottom: 50px;
+}
+/* Hide the images by default */
+.mySlidesClient {
+    display: none;
+    width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+
+/* Next & previous buttons */
+.prevClient, .nextClient {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:#12868E;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 25px 25px 0;
+}
+
+/* Position the "next button" to the right */
+.nextClient {
+    right: 0;
+    border-radius: 25px 0 0 25px;
+}
+/* On hover, add background color */
+.prevClient:hover, .nextClient:hover {
+    background-color: rgb(24, 179, 190) ;
+}
+
+/* The dots/bullets/indicators */
+.dotClient {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dotClient:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+
+
+/* ------------------FOOTER------------------ */
+div#footer-container {
+    height: 100%;
+    background-color: #12868E;
+}
+h3#footer-title {
+    color: white;
+    font-family:  'Quicksand', sans-serif;
+    font-size: 15pt;
+    font-weight: 500; 
+}
+/* footer-about-content */
+p#footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+    padding-right: 70px;
+}
+/* footer-information-contact us-content */
+ul#footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+    padding-left: 0;
+}
+/* list kerning */
+ul#footer-content li {
+    margin: 0 0 15px 0;
+}
+ul#footer-content li a{
+    text-decoration: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+}
+ul#footer-content li a:hover{
+    color: #0B2C39;
+}
+/* icon to list gap */
+ul#footer-content img {
+    width: 14px;
+    margin-right: 15px;
+}
+
+/* ------------------COPYRIGHT------------------ */
+div#copyright-container {
+    background-color: #0B2C39;
+    height: 100px;
+}
+p.footer-content {
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+    vertical-align: middle;
+    line-height: 65px;
+}
+p.footer-content a{
+    text-decoration: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+    vertical-align: middle;
+    line-height: 65px;
+}
+
+
+
+
+/* ------------------Start Of Media Quaries----------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+    /* Hide mobile on desktop */
+    div#selling-container-mbl {
+        display: none;
+    }
+    div#navMbl {
+        display: none;
+    }
+    div#mbl-selling-container{
+        display: none;
+    }
+    ul#mbl-footer-content {
+        display: none;
+    }
+    div#mbl-feature-blog-container{
+        display: none;
+    }
+    div#mbl-footer-container{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* #body {
+        background-color: red;
+    } */
+
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+      /* Hide desktop on mobile */
+    div#selling-container {
+        display: none;
+      }
+    div#nav-bar-container {
+        display: none;
+    }
+    div#service-container {
+        display: none;
+    }
+    div#feature-blog-container {
+        display: none;
+    }
+    div#clients-partners-top-container {
+        display: none;
+    }
+    div#carousel-container{
+        display: none;
+    }
+    div#footer-container {
+        display: none;
+    }
+    div#copyright-container {
+        display: none;
+    }
+    
+
+/* ------------------NAVIGATION MOBILE------------------ */
+    div#navMbl {
+        display: block;
+        width: 100%;
+        padding: 0 30px;
+        position: sticky;
+        top: 0;
+        margin: auto;
+        background-color: white;
+        z-index: 2;;
+    }
+
+    label#nav-label {
+        font-size: 26px;
+        /* height: 70px; */
+        line-height: 0;
+        vertical-align: middle;
+        /* display: block; */
+        cursor: pointer;
+        float: right;
+        width: 26px;
+        padding-top: 22px;
+    }
+
+    #mbl-menu{
+        display: none;
+    }
+
+    img.mbl-nav-logo{
+        width: 150px;
+        padding: 10px 0 0 10px;
+        float: left;
+    } 
+    
+    div#navMbl div#mbl-menu a{
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: #0B2C39;
+        padding: 10px;
+        font-family:  'Quicksand', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    div#navMbl div#mbl-menu a:hover{
+        color: #12868E;
+        font-family:  'Quicksand', sans-serif;
+        font-weight: 500;
+        border-bottom: 3px solid #12868E;    
+        padding-bottom: 7px;
+        cursor: pointer;
+    }
+
+/* ------------------HERO SECTION MOBILE------------------*/
+    h1.hero-title {
+        display: block;
+        color: #0B2C39;
+        font-family:  'Quicksand', sans-serif;
+        font-weight:500;
+        font-size: 30px;
+        text-align: center;
+    }
+    .hero-image {
+        width: 80%;
+        display: block;
+        margin: 0 10% 0 10%;
+    }
+
+/* ------------------MOBILE SELLING POINTS MOBILE------------------*/
+    div#mbl-selling-container {
+        background-image: url("img/arcBackgroundMobile.png");
+        background-size:cover;
+        /* margin-top: 500px; */
+        padding:0 30px ;
+        width: 100%;
+        height: auto;
+    }
+    h1.selling-title {
+        color: #12868E;
+        font-family:  'Quicksand', sans-serif;
+        font-weight:500;
+        font-size: 30px;
+        text-align: center;
+        margin: 30px 0;
+        padding-top: 30px;
+    }
+
+    /* slideshow container */
+    div#mbl-slide-container {
+        width: 100%;
+        height: 100%;
+        /* max-width: 100%; */
+        position: relative;
+        display: block;
+    }
+    .mbl-selling-img{
+        width: 120px;
+        margin: auto;
+        display: block;
+        /* padding-bottom: 50px; */
+    }
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+        width: 100%;
+        /* margin-left: auto;
+        margin-right: auto; */
+    }
+    
+    /* Selling title */
+    .mbl-selling-title {
+        font-family:  'Roboto', sans-serif;
+        color: #0B2C39;
+        font-size: 23px;
+        padding: 0 80px;
+        position: static;
+        /* top: 10px; */
+        width: 100%;
+        text-align: center;
+        /* margin: auto; */
+    }
+    /* Caption text */
+    .text {
+        font-family:  'Roboto', sans-serif;
+        color: #4A4A4A;
+        font-size: 15px;
+        padding: 5px 120px;
+        position: static;
+        /* top: 280px; */
+        width: 100%;
+        text-align: center;
+        /* overflow: scroll; */
+        /* margin: auto; */
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 30%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color:#12868E;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 25px 0 0 25px;
+        text-decoration: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 0 25px 25px 0;
+    }
+    /* On hover, add background color */
+    .prev:hover, .next:hover {
+        background-color: rgb(24, 179, 190) ;
+        text-decoration: none;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        top: 500px;
+    }
+    
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    
+
+
+/* ------------------FEATURE BLOG MOBILE------------------ */
+div#mbl-feature-blog-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+div#mbl-feature-blog-container div.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div h3.feature-blog-title {
+    color: #12868E;
+    font-family:  'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 50px
+}
+div p.feature-blog-content {
+    color: #12868E;
+    font: 400 10px  'Roboto', sans-serif;
+    margin-bottom: 50px;
+    padding-left: 50px
+}
+div img.feature-blog-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    margin: 0;
+    padding-right: 20px;
+}
+
+/* ------------------FOOTER MOBILE------------------ */
+
+div#mbl-footer-container {
+    width: 100%;
+    height: 100%;
+    background-color: #12868E;
+}
+h3#mbl-footer-title {
+    color: white;
+    font-family:  'Quicksand', sans-serif;
+    font-size: 15pt;
+    font-weight: 400; 
+    padding: 0 50px;
+}
+/* footer-about-content */
+p#mbl-footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 50px;
+}
+/* footer-information-contact us-content */
+ul#mbl-footer-content {
+    list-style-type: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 50px;;
+
+}
+ul#mbl-footer-content{
+    display: inline-block;
+
+}
+/* list kerning */
+ul#mbl-footer-content li {
+    margin: 0 0 15px 0;
+}
+ul#mbl-footer-content li a{
+    text-decoration: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+}
+ul#mbl-footer-content li a:hover{
+    color: #0B2C39;
+}
+/* icon to list gap */
+ul#mbl-footer-content img {
+    width: 15px;
+    margin-right: 15px;
+}
+#mbl-footer-line{
+    border-bottom: solid 2px #00757D;
+}
+
+/* ------------------COPYRIGHT------------------ */
+div#copyright-container {
+    background-color: #0B2C39;
+    height: 100px;
+}
+p.footer-content {
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+    vertical-align: middle;
+    line-height: 65px;
+}
+p.footer-content a{
+    text-decoration: none;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-size: 13px;
+    vertical-align: middle;
+    line-height: 65px;
+}
+
+
+
+
+}
+
+/* ------------------End Of Media Quaries------------------ */
